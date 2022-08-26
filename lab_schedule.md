@@ -6,7 +6,7 @@
 |   4 | Sep 19-23    |     -     |    -     |    Lab 2A: Patch Due  |
 |   5 | Sep 26-30    | - |    -     |    Lab 2B: Measure Patch   |
 |   6 | Oct 3-7    | -  |    -     |    Lab 2B: Measure Patch   |
-|   7 | Oct 10-14    | - |    Lab 2B: Measure Patch     |    -   |
+|   7 | Oct 10-14    | - |    -    |    -   |
 |   FALL BREAK | Oct 17-21    | Enjoy |    Your     |    Break :)   |
 |   8 | Oct 24-28    | -  |    -     |    -   |
 |   9 | Oct 31-Nov 4    | Lab 4: Array Simulation  |    -     |       |
