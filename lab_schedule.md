@@ -1,8 +1,8 @@
 | Week       | Dates   |     M     |    W     |    F   |
 | :---:      | :---:   |   :----:  |  :----:  |  :---:  |
 |   1 | Aug 29-Sep 3    |     -     |    -     |    -   |
-|   2 |  Sep 5-10     | Labor Day |    -     |    -   |
-|   3 | Sep 12-16    | Lab 1: VNA | Lab 1: VNA |   -   |
+|   2 |  Sep 5-10     | Labor Day |    -     |    Lab 1: VNA   |
+|   3 | Sep 12-16    | - | - |   -   |
 |   4 | Sep 19-23    |     Lab 2A: Design Spliiter     |    -     |    -   |
 |   5 | Sep 26-30    | Lab 2B: Measure Splitter |    Lab 2B: Measure Splitter     |    -   |
 |   6 | Oct 3-7    | -  |    -     |    -   |
