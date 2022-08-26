@@ -1,6 +1,8 @@
-% create trace
+% https://www.mathworks.com/help/rfpcb/ref/microstripline.html
+
+% create microstrip trace, 3cm long
 d = dielectric('FR4');
-trace = design(microstripLine('Substrate',d),2.45e9,'Z0',50,'LineLength',.25);
+trace = design(microstripLine('Substrate',d),1.25e9,'Z0',50,'LineLength',.25);
 % show(trace);
 
 % convert to PCB
@@ -16,7 +18,7 @@ show(robj);
 % figure;
 % rfplot(spar,1,1,'db','-s')
 
-% create gerber file
+% % create gerber files
 % s = PCBServices.MayhewWriter;
 % s.Filename = 'microstrip-test';
 % PW = PCBWriter(robj,s);

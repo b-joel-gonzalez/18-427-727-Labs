@@ -36,14 +36,14 @@ ant.BoardThickness = height;
 figure;
 show(ant);
 
-% test impedance and reflection
+% % test impedance and reflection
 % figure;
 % impedance(ant,linspace(2.2e9,2.6e9,31));
-spar = sparameters(ant,linspace(2e9,3e9,30));
-figure;
-rfplot(spar);
+% spar = sparameters(ant,linspace(2e9,3e9,30));
+% figure;
+% rfplot(spar);
 
-% gerber files
+% % gerber files
 % s = PCBServices.MayhewWriter;
 % s.Filename = 'antenna-test';
 % PW = PCBWriter(ant,s);
