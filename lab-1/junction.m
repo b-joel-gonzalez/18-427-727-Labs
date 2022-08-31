@@ -20,7 +20,7 @@ show(robj);
 
 % % gerber files
 % s = PCBServices.MayhewWriter;
-% s.Filename = 'splitter-test';
+% s.Filename = 'junction-test';
 % PW = PCBWriter(robj,s);
 % PW.UseDefaultConnector = 0;
 % gerberWrite(PW)

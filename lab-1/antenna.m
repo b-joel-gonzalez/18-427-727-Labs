@@ -24,24 +24,24 @@ feedLine = traceRectangular('Length',feedLineLength,'Width',feedLineWidth,'Cente
 antShape = patch + transformerLine + feedLine;
 translate(antShape,[patchLength/2+feedLineLength+line.Length,0,0]);
 figure;
-show(antShape);
+% show(antShape);
 
 % make PCB
-Gnd = antenna.Rectangle('Length',groundPlaneLength,'Width',groundPlaneWidth,'Center',[groundPlaneLength/2,0]); 
-ant = pcbStack;
-ant.Layers = {antShape,d,Gnd};
-ant.BoardShape    = Gnd;
-ant.FeedLocations = [0 0 1 3];
-ant.BoardThickness = height;
-figure;
-show(ant);
+% Gnd = antenna.Rectangle('Length',groundPlaneLength,'Width',groundPlaneWidth,'Center',[groundPlaneLength/2,0]); 
+% ant = pcbStack;
+% ant.Layers = {antShape,d,Gnd};
+% ant.BoardShape    = Gnd;
+% ant.FeedLocations = [0 0 1 3];
+% ant.BoardThickness = height;
+% figure;
+% show(ant);
 
 % % test impedance and reflection
-% figure;
-% impedance(ant,linspace(2.2e9,2.6e9,31));
-% spar = sparameters(ant,linspace(2e9,3e9,30));
-% figure;
-% rfplot(spar);
+figure;
+impedance(ant,linspace(2.2e9,2.6e9,101));
+spar = sparameters(ant,linspace(2e9,3e9,100));
+figure;
+rfplot(spar);
 
 % % gerber files
 % s = PCBServices.MayhewWriter;
