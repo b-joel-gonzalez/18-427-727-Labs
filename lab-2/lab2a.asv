@@ -1,0 +1,54 @@
+%% 18729 Lab 2A: Patch Antenna Design
+%antLength = 0.2; % antenna length in meters
+patch = patchMicrostripInsetfed;
+freq = 3e9;
+
+%show(patch);
+pattern(patch,freq);
+
+patternAzimuth(patch,freq);
+
+patternElevation(patch,freq);
+
+
+%impedance(patch,freq*.9:freq/1000:freq*1.1);
+S = sparameters(patch,freq*.9:freq/1000:freq*1.1);
+
+%% Physical constant
+c  = physconst('lightspeed');
+
+%% Design Parameters
+% from: 
+%center frequency
+fc = 3e9; 
+
+%dielectric constant
+er = 4.2;
+
+%Hight of the substrate
+h = 1.4986e-3; %m 1.524mm
+
+%microstrip width 50ohms
+mw50 = 2.762e-3; %m
+
+%microstrip width 100ohms
+mw100 = .658e-3; %m
+
+%Length of antenna patch
+L = c/(2*fc*sqrt(er)); %m
+% L = .02560;
+
+%Width of antenna patch
+W = .03;%L; %m
+
+%Length of ground plane
+Lg = .045; %2*L;
+
+%Width of ground plane
+Wg = .04; %2*W;
+
+%Inset notch width
+Nw = mw50*3;
+
+%Inset notch length
+Nl = mw50*1.7;
