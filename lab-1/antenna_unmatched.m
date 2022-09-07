@@ -1,4 +1,4 @@
-% impedance-matched patch antenna
+% patch antenna with no quarter-wave transformer
 
 % 2.45 GHz parameters
 patchLength    = 27.6e-3;
@@ -20,11 +20,11 @@ line = design(microstripLine('Substrate',d),2.45e9,"LineLength",0.25,"Z0",114);
 transformerLine = traceRectangular('Length',line.Length,'Width',line.Width,'Center',[(-patch.Length/2-line.Length/2),0]);
 
 % create patch antenna feedline (50 ohm)
-feedLine = traceRectangular('Length',feedLineLength,'Width',feedLineWidth,'Center',[(-patch.Length/2-line.Length-feedLineLength/2),0]);
+feedLine = traceRectangular('Length',feedLineLength,'Width',feedLineWidth,'Center',[(-patch.Length/2-feedLineLength/2),0]);
 
 % add feedline + transformer
-antShape = patch + transformerLine + feedLine;
-translate(antShape,[patchLength/2+feedLineLength+line.Length,0,0]);
+antShape = patch + feedLine;
+translate(antShape,[patchLength/2+feedLineLength,0,0]);
 % figure;
 % show(antShape);
 
@@ -39,16 +39,16 @@ figure;
 show(ant);
 hold;
 
-% test impedance and reflections (this takes some time)
-% figure;
-% impedance(ant,linspace(2.2e9,2.6e9,101));
+% test impedance and reflection (this takes some time)
+figure;
+impedance(ant,linspace(2.2e9,2.6e9,101));
 spar = sparameters(ant,linspace(2e9,3e9,50));
 figure;
 rfplot(spar);
 
 % create gerber files (requires the appropriate subdirectory)
 s = PCBServices.MayhewWriter;
-s.Filename = 'antenna-test';
+s.Filename = 'antenna-unmatched-test';
 PW = PCBWriter(ant,s);
 PW.UseDefaultConnector = 0;
 gerberWrite(PW)
