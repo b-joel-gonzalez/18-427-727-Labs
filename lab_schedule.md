@@ -8,7 +8,7 @@
 |   6 | Oct 3-7    | -  |    -     |    Lab 3: Measure Patch   |
 |   7 | Oct 10-14    | - |    -    |    -   |
 |   FALL BREAK | Oct 17-21    | Enjoy |    Your     |    Break :)   |
-|   8 | Oct 24-28    | -  |    -     |    -   |
+|   8 | Oct 24-28    | -  |    -     |    Homecoming Weekend   |
 |   9 | Oct 31-Nov 4    | -  |    -     |   Lab 4: SDR Modulation   |
 |   10 | Nov 7-11  | -  |    -     |    -   |
 |   11 | Nov 14-18   | - |   -     |     Lab 5: Array Simulation  |
