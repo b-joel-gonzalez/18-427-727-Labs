@@ -64,13 +64,8 @@ def plot_pattern(data):
 
     # plot polar pattern and normalized pattern
     fig = plt.figure(layout='constrained')
-
-    ax1 = fig.add_subplot(1, 2, 1, projection='polar', theta_offset=np.pi/2)
-    ax1.plot(np.linspace(0, 2 * np.pi, 360), gains)
-
-    ax2 = fig.add_subplot(1, 2, 2)
-    ax2.plot(range(360), np.array(data)/max(gains))
-
+    ax = fig.add_subplot(1, 2, 1, projection='polar', theta_offset=np.pi/2)
+    ax.plot(np.linspace(0, 2 * np.pi, 360), gains)
     plt.show()
     
 
