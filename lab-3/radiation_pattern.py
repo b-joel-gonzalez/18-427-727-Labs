@@ -67,7 +67,6 @@ def plot_pattern(data):
     ax = fig.add_subplot(1, 2, 1, projection='polar', theta_offset=np.pi/2)
     ax.plot(np.linspace(0, 2 * np.pi, 360), gains)
     plt.show()
-    
 
 def main():
     vna = device_setup()
