@@ -81,32 +81,31 @@ def get_radiation_data(vna, freq):
 
 # plots the radiation pattern, given the S21 measurements
 def plot_pattern(data, N):
-    # get S21 in dB
+    # get S21 in dB, normalizing the data to 0 dB
     magnitudes = [abs(val) for val in data]
-    # interpolated_mags = pd.Series([i if i else np.nan for i in magnitudes]).interpolate().tolist()
     gains = [20*math.log10(mag) for mag in magnitudes]
+    max_gain = max(gains)
+    normalized_gains = [(gain - max_gain) for gain in gains]
     
-    print(gains) # prints all points, maybe save this data?
+    print(normalized_gains) # prints all points; maybe save this data?
 
     # plot polar radiation pattern
     fig = plt.figure(layout='constrained')
     ax = fig.add_subplot(1, 2, 1, projection='polar', theta_offset=np.pi/2)
-    ax.plot(np.linspace(0, 2 * np.pi, N), gains)
+    ax.plot(np.linspace(0, 2 * np.pi, N), normalized_gains)
+    ax.set_rlabel_position(0)
+    ax.text(0.5, 0.5, "dB", transform=ax.transAxes) 
     plt.show() # be sure to save your plot using the GUI!
 
 def main():
     vna = device_setup() # set up the vna device connection
     
-    # freq = str(round(get_center_freq(vna))) # find the center freq using S11 sweep
-    # they need to disconnect Port 2 first before looking at S11?
-    
     # look at S11 on the plot, then enter the center frequency
     freq = input("What is the measured center frequency of your patch antenna? Enter 2GHz as 2000000000, for example:\n")
-    
-    print("The center frequency is: " + freq) # check if this string is formatted properly (no scientific notation!)
+    print("The center frequency is: " + freq)
     
     # take N measurements of S21, rotating antenna each iteration for 360 degree pattern
-    N = 24 #  36 for 10 degrees, 24 for 15 degrees
+    N = 24 #  24 for 15 degrees
     data = [0] * N 
     angle = int(360 / N)
     
