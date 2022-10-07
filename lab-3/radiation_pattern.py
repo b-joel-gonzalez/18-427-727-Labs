@@ -105,7 +105,7 @@ def main():
     print("The center frequency is: " + freq)
     
     # take N measurements of S21, rotating antenna each iteration for 360 degree pattern
-    N = 24 #  24 for 15 degrees
+    N = 36 #  36 for 10 degrees
     data = [0] * N 
     angle = int(360 / N)
     
