@@ -1,6 +1,6 @@
 # 18-429/729 - Lab 3 - Fall 2022
 # Measures and plots the radiation pattern of an antenna.
-# Credit for starting Python code given to: https://github.com/jankae/LibreVNA
+# Credit for starter Python code given to: https://github.com/jankae/LibreVNA
 
 #!/usr/bin/env python3
 
