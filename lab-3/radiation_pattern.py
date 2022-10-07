@@ -61,8 +61,8 @@ def get_radiation_data(vna, freq):
     vna.cmd(":VNA:ACQ:IFBW 100")
     vna.cmd(":VNA:ACQ:AVG 5")
     vna.cmd(":VNA:ACQ:POINTS 251")
-    vna.cmd(":VNA:FREQuency:START " + freq) # CHANGE THIS TO GRAB USER INPUT
-    vna.cmd(":VNA:FREQuency:STOP " + freq) # CHANGE THIS TO GRAB USER INPUT
+    vna.cmd(":VNA:FREQuency:START " + freq)
+    vna.cmd(":VNA:FREQuency:STOP " + freq)
 
     # wait for the sweep to finish
     print("Waiting for the sweep to finish...")
@@ -87,7 +87,7 @@ def plot_pattern(data, N):
     max_gain = max(gains)
     normalized_gains = [(gain - max_gain) for gain in gains]
     
-    print(normalized_gains) # prints all points; maybe save this data?
+    print(normalized_gains) # prints all data points
 
     # plot polar radiation pattern
     fig = plt.figure(layout='constrained')
@@ -100,7 +100,7 @@ def plot_pattern(data, N):
 def main():
     vna = device_setup() # set up the vna device connection
     
-    # look at S11 on the plot, then enter the center frequency
+    # look at the S11 plot in the GUI, then enter the center frequency
     freq = input("What is the measured center frequency of your patch antenna? Enter 2GHz as 2000000000, for example:\n")
     print("The center frequency is: " + freq)
     
