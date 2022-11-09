@@ -13,5 +13,5 @@
 |   11 | Nov 7-11  | -  |    Quiz 2     |    Lab 4: SDR Modulation   |
 |   12 | Nov 14-18   | - |   -     |     Lab 5: Array Simulation  |
 |   13 | Nov 21-24       | -  |    THANKSGIVING BREAK     |    THANKSGIVING BREAK   |
-|   14 | Nov 28-Dec 2   |-  |    -     |    Lab 6: MIMO Patterns   |
-|   15 | Dec 5-9       | - |    -     |    -   |
+|   14 | Nov 28-Dec 2   | Recitation 4  |    Quiz 3     |    Lab 6: MIMO Patterns   |
+|   15 | Dec 5-9       | - |    -     |    Lab 6: MIMO Patterns   |
