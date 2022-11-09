@@ -2,7 +2,7 @@
 % WQED = 89.3 FM
 
 %For the option to change default settings, set |cmdlineInput| to 1.
-cmdlineInput = 0;
+cmdlineInput = 1;
 if cmdlineInput
     % Request user input from the command-line for application parameters
     userInput = helperFMUserInput;
