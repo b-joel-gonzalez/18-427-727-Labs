@@ -1,16 +1,30 @@
-%% 18729 Lab 2A: Patch Antenna Design
+%% 18729 Lab 2: Patch Antenna Design
 
 %% Dipole
-d = dipoleCylindrical('Radius',0.001,'Length',.1);
-fc=1.4e9;
+dipole_radius = 1e-3;   % radius in meters
+dipole_length = 15e-2;  % length in meters
 
-show(d)
-pattern(d,fc)
-figure
-patternElevation(d,fc);
+dipole = dipoleCylindrical('Radius',dipole_radius,'Length',dipole_length);
+
+show(dipole)
 
 figure
-patternAzimuth(d,fc);
+fc = 2e9;
+pattern(dipole,fc)
+
+figure
+freqs = linspace(.9*fc,1.1*fc,100);
+impedance(dipole,freqs)
+
+S = sparameters(dipole, freqs);
+figure; 
+rfplot(S);
+%%
+figure
+patternElevation(dipole,fc);
+
+figure
+patternAzimuth(dipole,fc);
 
 %enumerate frequencies
 freqs = linspace(.9*fc,1.1*fc,100);
@@ -20,24 +34,24 @@ figure
 impedance(d,freqs)
 
 % plot S11
-S = sparameters(d, freqs);
+S = sparameters(dipole, freqs);
 figure; 
 rfplot(S);
 
-%antLength = 0.2; % antenna length in meters
-patch = patchMicrostripInsetfed;
-freq = 3e9;
+% %antLength = 0.2; % antenna length in meters
+% patch = patchMicrostripInsetfed;
+% freq = 3e9;
 
 %show(patch);
-pattern(patch,freq);
-
-patternAzimuth(patch,freq);
-
-patternElevation(patch,freq);
-
-
-impedance(patch,freq*.9:freq/1000:freq*1.1);
-S = sparameters(patch,freq*.9:freq/1000:freq*1.1);
+% pattern(patch,freq);
+% 
+% patternAzimuth(patch,freq);
+% 
+% patternElevation(patch,freq);
+% 
+% 
+% impedance(patch,freq*.5:freq/1000:freq*1.5);
+% S = sparameters(patch,freq*.5:freq/1000:freq*1.5);
 
 %% Design Parameters
 % from: https://teaandtechtime.com/2-4-ghz-patch-antenna-design-with-matlab/
