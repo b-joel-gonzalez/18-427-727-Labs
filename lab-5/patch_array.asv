@@ -39,6 +39,7 @@ figure;
 show(ant);
 hold;
 
+%%
 % analysis of antenna (impedance, S11, radiation patterns)
 % figure;
 % impedance(ant,linspace(5e8,1.5e9,51)); % show impedance from .5-1.5GHz
@@ -47,14 +48,14 @@ hold;
 % s11 = sparameters(ant,linspace(5e8,1.5e9,51)); % get the S11 plot
 % rfplot(s11);
 % 
-% figure;
-% patternElevation(ant, 9.15e8); % show the elevation pattern
-% 
-% figure;
-% patternAzimuth(ant, 9.15e8); % show the azimuth pattern
-% 
-% figure;
-% pattern(ant, 9.15e8); % show the radiation pattern at 2.45GHz
+figure;
+patternElevation(ant, 915e6); % show the elevation pattern
+
+figure;
+patternAzimuth(ant, 915e6); % show the azimuth pattern
+
+figure;
+pattern(ant, 915e6); % show the radiation pattern at 2.45GHz
 
 % create gerber files (requires the appropriate subdirectory)
 % s = PCBServices.MayhewWriter;
@@ -62,3 +63,19 @@ hold;
 % PW = PCBWriter(ant,s);
 % PW.UseDefaultConnector = 0;
 % gerberWrite(PW)
+
+%% now make it an array
+pcbArr = array(ant,'linear','NumElements',5,'ElementSpacing',0.2);
+show(pcbArr)
+la = linearArray;
+la.NumElements = 4;
+la.Element = ant;
+la.ElementSpacing = (3e8/915e6)/2;
+
+% la.PhaseShift = (15:-1:0) *127.27;
+
+figure;
+pattern(la,915e6);
+
+figure;
+patternAzimuth(la,915e6);
