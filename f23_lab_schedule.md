@@ -8,10 +8,10 @@
 |   6 | Oct 2-6    | -  |    Quiz 1     |    Lab 3: Measuring Antennas & Amplifiers   |
 |   7 | Oct 9-13    | - |    -    |    -   |
 |   8 (FALL BREAK) | Oct 16-20    | Enjoy |    Your     |    Break :)   |
-|   9 | Oct 23-27    | -  |    -     |    Lab 4: SDR Modulation   |
+|   9 | Oct 23-27    | -  |    -     |    Lab 4: SDRs & Modulation   |
 |   10 | Oct 30-Nov 3    | -  |    -     |   Recitation 3   |
 |   11 | Nov 6-10  | -  |    Quiz 2     |    Lab 5: Array Simulation   |
 |   12 | Nov 13-17   | - |   -     |     -  |
 |   13 | Nov 20-24       | -  |    THANKSGIVING BREAK     |    THANKSGIVING BREAK   |
-|   14 | Nov 27-Dec 1   | Recitation 4  |    Quiz 3     |    Lab 6: MIMO Patterns & Direction Finding   |
+|   14 | Nov 27-Dec 1   | Recitation 4  |    Quiz 3     |    Lab 6: Beamforming & MIMO   |
 |   15 | Dec 4-8       | - |    -     |    -  |
