@@ -10,7 +10,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from libreVNA import libreVNA
-
+import serial
+import serial.tools.list_ports
 # connects to the VNA
 def device_setup():
     # Create the control instance
@@ -29,6 +30,14 @@ def device_setup():
         print("Connected to "+dev)
     return vna
 
+def pico_setup():
+    ports = list(serial.tools.list_ports.comports())
+    for p in ports:
+        print(p)
+        if p.vid == 11914:
+            pico_port = serial.Serial(p.device, 9600)
+            return pico_port
+    print("Pi PICO NOT FOUND!!!")
 """
 # probes S11 to find the center frequency of the antenna (across 2-3GHz)
 def get_center_frequency(vna):
@@ -64,7 +73,7 @@ def get_radiation_data(vna, freq):
     vna.cmd(":VNA:STIM:LVL 10")
     vna.cmd(":VNA:ACQ:IFBW 100")
     vna.cmd(":VNA:ACQ:AVG 5")
-    vna.cmd(":VNA:ACQ:POINTS 251")
+    vna.cmd(":VNA:ACQ:POINTS 25") # should be 251
     vna.cmd(":VNA:FREQuency:START " + freq)
     vna.cmd(":VNA:FREQuency:STOP " + freq)
 
@@ -94,7 +103,8 @@ def plot_pattern(data, N):
     print(normalized_gains) # prints all data points
 
     # plot polar radiation pattern
-    fig = plt.figure(layout='constrained')
+    #fig = plt.figure(layout='constrained')
+    fig = plt.figure()
     ax = fig.add_subplot(1, 2, 1, projection='polar', theta_offset=np.pi/2)
     ax.plot(np.linspace(0, 2 * np.pi, N), normalized_gains)
     ax.set_rlabel_position(0)
@@ -103,20 +113,28 @@ def plot_pattern(data, N):
 
 def main():
     vna = device_setup() # set up the vna device connection
-    
+    pico = pico_setup()
+    pico.write("r\n".encode()) #reset servo angle to 0 deg
+
     # look at the S11 plot in the GUI, then enter the center frequency
     freq = input("What is the measured center frequency of your patch antenna? Enter 2GHz as 2000000000, for example:\n")
     print("The center frequency is: " + freq)
     
     # take N measurements of S21, rotating antenna each iteration for 360 degree pattern
-    N = 36 #  36 for 10 degrees
+    N = 24 #  36 for 10 degrees
     data = [0] * N 
     angle = int(360 / N)
     
     print("Taking " + str(N) + " measurements, once every " + str(angle) + " degrees...")
     
     for x in range(N):
-        input("Press key when ready to take measurement at " + str(x * angle) + " degrees...") # give time to adjust antenna angle
+        #input("Press key when ready to take measurement at " + str(x * angle) + " degrees...") # give time to adjust antenna angle
+        print("take measurement at " + str(x * angle) + " degrees...")
+        #pico.write(str(angle).encode()) #servo increment 15 deg
+        if (x!=0):
+            pico.write("a\n".encode())
+            time.sleep(1)
+        
         S21 = get_radiation_data(vna, freq)
         data[x] = S21
         print(S21)
