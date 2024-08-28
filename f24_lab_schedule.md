@@ -1,8 +1,8 @@
 | Week       | Dates   |     M     |    W     |    F   |
 | :---:      | :---:   |   :----:  |  :----:  |  :---:  |
 |   1 | Aug 26-Aug 30    |     -     |    -     |    -   |
-|   2 |  Sep 2-6     | Labor Day |    -     |    Lab 1: Transmission Lines & VNAs   |
-|   3 | Sep 9-13    | - | - |   Recitation 1 |
+|   2 |  Sep 2-6     | Labor Day |    -     |    Recitation 1   |
+|   3 | Sep 9-13    | - | - |  Lab 1: Transmission Lines & VNAs  |
 |   4 | Sep 16-20    |     -     |    -     |   Lab 2: Patch Antenna Design    |
 |   5 | Sep 23-27    | - |    -     |    Recitation 2   |
 |   6 | Sept 30-Oct 4    | -  |    Quiz 1     |    Lab 3: Patch Antenna Characterization   |
