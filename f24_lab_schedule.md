@@ -6,7 +6,7 @@
 |   4 | Sep 16-20    |     -     |    -     |   Lab 2: Patch Antenna Design    |
 |   5 | Sep 23-27    | - |    -     |    Recitation 2 (Quiz 1 Review)   |
 |   6 | Sept 30-Oct 4    | -  |    Quiz 1     |    Lab 3: Patch Antenna Characterization   |
-|   7 | Oct 7-11    | - |    -    |    -   |
+|   7 | Oct 7-11    | - |    -    |    Recitation 3 (PCB Tutorial)   |
 |   8 (FALL BREAK) | Oct 14-18    | Enjoy |    Your     |    Break :)   |
 |   9 | Oct 21-25    | -  |    -     |    Recitation 4 (HW Review)   |
 |   10 | Oct 28-Nov 1    | -  |    -     |   Lab 4: RF PCB Filters   |
