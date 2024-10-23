@@ -10,8 +10,8 @@
 |   8 (FALL BREAK) | Oct 14-18    | Enjoy |    Your     |    Break :)   |
 |   9 | Oct 21-25    | -  |    -     |   Lab 4: SDRs & Modulation    |
 |   10 | Oct 28-Nov 1    | -  |    -     |   Recitation 4   |
-|   11 | Nov 4-8  | - |   Quiz 2     |     Recitation 5  |
-|   12 | Nov 11-15   | -  |     -    |   Lab 5: Antenna Arrays & Beam Steering   |
+|   11 | Nov 4-8  | - |   Quiz 2     |     Lab 5: Antenna Arrays & Beam Steering  |
+|   12 | Nov 11-15   | -  |     -    |   Recitation 5   |
 |   13 | Nov 18-22       | -  |    -     |    Recitation 6 |
 |   14 | Nov 25-Nov 29   | -  |    THANKSGIVING BREAK     |    THANKSGIVING BREAK   |
 |   15 | Dec 2-6       | - |    Quiz 3     |    Lab 6: MIMO  |
