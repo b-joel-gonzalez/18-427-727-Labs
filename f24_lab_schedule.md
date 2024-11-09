@@ -11,7 +11,7 @@
 |   9 | Oct 21-25    | -  |    -     |   Lab 4: SDRs & Modulation    |
 |   10 | Oct 28-Nov 1    | -  |    -     |   Recitation 4   |
 |   11 | Nov 4-8  | - |   Quiz 2     |     Lab 5: Antenna Arrays Simulation  |
-|   12 | Nov 11-15   | -  |     -    |   Lab 6: Beam Steering   |
-|   13 | Nov 18-22       | -  |    -     |   Recitation 5 + Lab 7: RF PCB Design  |
+|   12 | Nov 11-15   | -  |     -    |   Recitation 5   |
+|   13 | Nov 18-22       | -  |    -     |   Lab 6: Beam Steering  |
 |   14 | Nov 25-Nov 29   | -  |    THANKSGIVING BREAK     |    THANKSGIVING BREAK   |
-|   15 | Dec 2-6    | Recitation 6 |    Quiz 3     |    Lab 8: MIMO  |
+|   15 | Dec 2-6    | Recitation 6 |    Quiz 3     |    Lab 7: MIMO  |
