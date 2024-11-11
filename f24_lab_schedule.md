@@ -14,4 +14,4 @@
 |   12 | Nov 11-15   | -  |     -    |   Recitation 5   |
 |   13 | Nov 18-22       | -  |    -     |   Lab 6: Beam Steering  |
 |   14 | Nov 25-Nov 29   | -  |    THANKSGIVING BREAK     |    THANKSGIVING BREAK   |
-|   15 | Dec 2-6    | Recitation 6 |    Quiz 3     |    Lab 7: MIMO  |
+|   15 | Dec 2-6    | Recitation 6 |    Quiz 3     |    Bonus Lab: MIMO  |
