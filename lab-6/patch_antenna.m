@@ -45,22 +45,22 @@ hold;
 
 %% plotting characteristics
 
-% % figure;
-% s11 = sparameters(ant,linspace(5e8,1.5e9,51)); % get the S11 plot
-% rfplot(s11);
-% 
-% figure;
-% patternElevation(ant, fc); % show the elevation pattern
-% 
-% figure;
-% patternAzimuth(ant, fc); % show the azimuth pattern
-% 
-% figure;
-% pattern(ant, fc); % show the radiation pattern
-% 
-% %% create gerber files (requires the appropriate subdirectory)
-% s = PCBServices.MayhewWriter;
-% s.Filename = 'patch';
-% PW = PCBWriter(ant,s);
-% PW.UseDefaultConnector = 0;
-% gerberWrite(PW)
+figure;
+s11 = sparameters(ant,linspace(5e8,1.5e9,51)); % get the S11 plot
+rfplot(s11);
+ 
+figure;
+patternElevation(ant, fc); % show the elevation pattern
+
+figure;
+patternAzimuth(ant, fc); % show the azimuth pattern
+ 
+figure;
+pattern(ant, fc); % show the radiation pattern
+
+%% create gerber files (requires the appropriate subdirectory)
+s = PCBServices.MayhewWriter;
+s.Filename = 'patch';
+PW = PCBWriter(ant,s);
+PW.UseDefaultConnector = 0;
+gerberWrite(PW)
